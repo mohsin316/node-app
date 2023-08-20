@@ -3,7 +3,7 @@ const app = express();
 require("dotenv").config();
 
 app.get("/api", (req, res) => {
-  res.json({ mssg: "This is a successful GET req" });
+  res.json({ mssg: "This is a successful GET req", port: process.env.PORT });
 });
 
 app.listen(process.env.PORT, () => {
